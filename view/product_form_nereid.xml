@@ -7,6 +7,11 @@ this repository contains the full copyright notices and license terms. -->
             <newline/>
             <label name="displayed_on_eshop"/>
             <field name="displayed_on_eshop"/>
+    </xpath>
+    <xpath expr="/form/field[@name=&quot;active&quot;]"
+            position="after">
+            <separator colspan="6" string="Product description"
+                            id="product_description"/>
             <label name="use_template_description"/>
             <field name="use_template_description"/>
     </xpath>
@@ -16,7 +21,7 @@ this repository contains the full copyright notices and license terms. -->
     <xpath expr="/form/field[@name=&quot;description&quot;]"
         position="replace">
     </xpath>
-    <xpath expr="/form/field[@name=&quot;active&quot;]" position="after">
+    <xpath expr="/form/field[@name=&quot;use_template_description&quot;]" position="after">
         <notebook colspan="6">
             <page string="Description" id="desc"
                     states="{'invisible': Bool(Eval('use_template_description'))}">
